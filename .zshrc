@@ -312,7 +312,7 @@ dotfilesync() {
 dotfilepull() {
   cd ~/dotfiles
   git pull origin main
-  cp -f ~/dotfiles/.zshrc ~/.zshrc
+  /bin/cp -f ~/dotfiles/.zshrc ~/.zshrc
   source ~/.zshrc
   cd -
 }
