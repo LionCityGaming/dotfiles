@@ -316,3 +316,4 @@ dotfilepull() {
   source ~/.zshrc
   cd -
 }
+source ~/you-should-use/you-should-use.plugin.zsh
