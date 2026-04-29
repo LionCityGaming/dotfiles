@@ -21,11 +21,11 @@ myip() {
 dlog() { docker logs -f "$1"; }
 dsh() { docker exec -it "$1" bash; }
 port() { ss -tlnp | grep "$1"; }
+
 compose() { docker compose -f /opt/app-data/"$1"/docker-compose.yml "${@:2}"; }
 
 dotfilesync() {
   /bin/cp -f ~/.zshrc ~/dotfiles/.zshrc
-  /bin/cp -rf ~/.zsh ~/dotfiles/
   cd ~/dotfiles
   git diff --stat
   git add .
