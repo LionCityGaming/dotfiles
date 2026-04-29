@@ -299,3 +299,12 @@ bindkey "^[[3~" delete-char
 FUNCNEST=200
 FUNCNEST=200
 FUNCNEST=200
+
+dotfilesync() {
+  cp ~/.zshrc ~/dotfiles/.zshrc
+  cd ~/dotfiles
+  git add .
+  git commit -m "update zshrc $(date +%d-%m-%Y)"
+  git push
+  cd -
+}
