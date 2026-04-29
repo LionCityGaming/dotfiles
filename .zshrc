@@ -297,21 +297,9 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 FUNCNEST=200
-FUNCNEST=200
-FUNCNEST=200
-
-dotfilesync() {
   cp ~/.zshrc ~/dotfiles/.zshrc
   cd ~/dotfiles
-  git add .
-  git commit -m "update zshrc $(date +%d-%m-%Y)"
-  git push
-  cd -
-}
-
-dotfilesync() {
-  cp ~/.zshrc ~/dotfiles/.zshrc
-  cd ~/dotfiles
+  git diff --stat
   git add .
   git commit -m "update zshrc $(date +%d-%m-%Y)"
   git push origin main
