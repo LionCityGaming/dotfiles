@@ -299,7 +299,7 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
 dotfilesync() {
-  cp -f ~/.zshrc ~/dotfiles/.zshrc
+  /bin/cp -f ~/.zshrc ~/dotfiles/.zshrc
   cd ~/dotfiles
   git diff --stat
   git add .
