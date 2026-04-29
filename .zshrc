@@ -1,3 +1,4 @@
+FUNCNEST=200
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -295,5 +296,6 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+FUNCNEST=200
 FUNCNEST=200
 FUNCNEST=200
