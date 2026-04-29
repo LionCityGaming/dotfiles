@@ -13,7 +13,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 
 # Aliases
-alias zshconfig='nano ~/.zshrc'
+alias zshconfig='fresh ~/.zshrc'
 alias ls='eza --all --icons --group-directories-first'
 alias ll='eza --long --all --icons'
 
@@ -143,11 +143,12 @@ alias c="clear"
 
 alias zshrc="fresh ~/.zshrc"
 alias reload="source ~/.zshrc"
-alias path="echo $PATH | tr : '\n'"
+alias path='echo $PATH | tr ":" "
+"'
 alias now="date +\"%T\""
 alias today="date +\"%d-%m-%Y\""
 alias ip="curl -s ifconfig.me"
-alias localip="hostname -I | awk '{print $1}'"
+alias localip='hostname -I | cut -d" " -f1'
 alias ports="ss -tlnp"
 alias diskusage="duf"
 alias top="htop"
@@ -210,7 +211,7 @@ alias biggest="du -sh * | sort -rh | head -10"
 alias biggest2="ncdu"
 alias space="df -h"
 alias countfiles="find . -type f | wc -l"
-alias hidden="ls -la | grep \"^\.\""
+alias hidden='eza -la --icons | grep "^."'
 alias recent="find . -type f -mmin -60"
 alias old="find . -type f -mtime +30"
 alias pvels="pvesh get /nodes/pve/lxc --output-format=table"
@@ -240,7 +241,7 @@ alias biggest="du -sh * | sort -rh | head -10"
 alias biggest2="ncdu"
 alias space="df -h"
 alias countfiles="find . -type f | wc -l"
-alias hidden="ls -la | grep \"^\.\""
+alias hidden='eza -la --icons | grep "^."'
 alias recent="find . -type f -mmin -60"
 alias old="find . -type f -mtime +30"
 alias pvels="pvesh get /nodes/pve/lxc --output-format=table"
