@@ -317,3 +317,6 @@ dotfilepull() {
   cd -
 }
 source ~/you-should-use/you-should-use.plugin.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+export TERM=xterm-256color
+TERM=xterm-256color fastfetch
