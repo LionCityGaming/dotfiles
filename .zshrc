@@ -1,4 +1,4 @@
-FUNCNEST=500
+FUNCNEST=1000
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -299,7 +299,7 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
 dotfilesync() {
-  cp ~/.zshrc ~/dotfiles/.zshrc
+  cp -f ~/.zshrc ~/dotfiles/.zshrc
   cd ~/dotfiles
   git diff --stat
   git add .
