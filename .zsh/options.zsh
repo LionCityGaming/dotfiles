@@ -13,7 +13,7 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt AUTO_CD
 setopt CORRECT
-setopt CORRECT_ALL
+#setopt CORRECT_ALL
 
 autoload -Uz compinit && compinit
 zstyle ":completion:*" menu select
