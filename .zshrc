@@ -296,6 +296,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+
+dotfilesync() {
   cp ~/.zshrc ~/dotfiles/.zshrc
   cd ~/dotfiles
   git diff --stat
