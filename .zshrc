@@ -308,3 +308,13 @@ dotfilesync() {
   git push
   cd -
 }
+
+dotfilesync() {
+  cp ~/.zshrc ~/dotfiles/.zshrc
+  cd ~/dotfiles
+  git add .
+  git commit -m "update zshrc $(date +%d-%m-%Y)"
+  git push origin main
+  git push github main
+  cd -
+}
