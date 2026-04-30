@@ -40,8 +40,10 @@ dotfilepull() {
   cd ~/dotfiles
   git pull origin main
   /bin/cp -f ~/dotfiles/.zshrc ~/.zshrc
-  /bin/cp -rf ~/dotfiles/.zsh ~/
+  /bin/cp -rf ~/dotfiles/.zsh/* ~/.zsh/
   source ~/.zshrc
+  source ~/.zsh/aliases.zsh
+  source ~/.zsh/functions.zsh
   cd -
 }
 
