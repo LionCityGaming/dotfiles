@@ -25,6 +25,10 @@ port() { ss -tlnp | grep "$1"; }
 compose() { docker compose -f /opt/app-data/"$1"/docker-compose.yml "${@:2}"; }
 
 dotfilesync() {
+  if [[ "$(hostname)" != "proxmox" ]]; then
+    echo "dotfilesync only runs on Proxmox!"
+    return 1
+  fi
   /bin/cp -f ~/.zshrc ~/dotfiles/.zshrc
   /bin/cp -rf ~/.zsh/* ~/dotfiles/.zsh/
   cd ~/dotfiles
