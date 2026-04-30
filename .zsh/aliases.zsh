@@ -157,4 +157,3 @@ alias myaliases="alias | fzf"
 alias path='echo $PATH | tr ":" "\n"'
 alias files="yazi"
 alias files="yazi"
-# test

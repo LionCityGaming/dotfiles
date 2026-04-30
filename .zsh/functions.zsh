@@ -26,7 +26,7 @@ compose() { docker compose -f /opt/app-data/"$1"/docker-compose.yml "${@:2}"; }
 
 dotfilesync() {
   /bin/cp -f ~/.zshrc ~/dotfiles/.zshrc
-  /bin/cp -rf ~/.zsh ~/dotfiles/
+  /bin/cp -rf ~/.zsh/* ~/dotfiles/.zsh/
   cd ~/dotfiles
   git diff --stat
   git add .
