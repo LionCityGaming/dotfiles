@@ -34,6 +34,7 @@ dotfilesync() {
   git push origin main
   git push github main
   cd -
+  clear
   exec zsh
 }
 
@@ -48,6 +49,7 @@ dotfilepull() {
   /bin/cp -f ~/dotfiles/.zshrc ~/.zshrc
   /bin/cp -rf ~/dotfiles/.zsh/* ~/.zsh/
   cd -
+  clear
   exec zsh
 }
 
