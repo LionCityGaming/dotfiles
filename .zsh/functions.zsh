@@ -41,13 +41,16 @@ dotfilesync() {
 }
 
 dotfilepull() {
+  if [[ "$(hostname)" == "proxmox" ]]; then
+    echo "Warning: Proxmox is source of truth. Pull anyway? [y/N]"
+    read -r reply
+    [[ "$reply" != "y" ]] && return 1
+  fi
   cd ~/dotfiles
   git pull origin main
   /bin/cp -f ~/dotfiles/.zshrc ~/.zshrc
   /bin/cp -rf ~/dotfiles/.zsh/* ~/.zsh/
   source ~/.zshrc
-  source ~/.zsh/aliases.zsh
-  source ~/.zsh/functions.zsh
   cd -
 }
 
