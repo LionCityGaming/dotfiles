@@ -1,4 +1,3 @@
-cat > ~/.zsh/aliases.zsh << 'ALIASES'
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -96,7 +95,6 @@ alias status="systemctl status"
 alias restart="systemctl restart"
 
 # Network
-alias myip="curl -s ifconfig.me"
 alias localip='hostname -I | cut -d" " -f1'
 alias ports="ss -tlnp"
 alias connections="ss -tnp"
@@ -147,4 +145,3 @@ alias week="date +%V"
 alias h="history | fzf"
 alias myaliases="alias | fzf"
 alias path='echo $PATH | tr ":" "\n"'
-ALIASES
