@@ -145,5 +145,4 @@ alias week="date +%V"
 alias h="history | fzf"
 alias myaliases="alias | fzf"
 alias path='echo $PATH | tr ":" "\n"'
-alias rz="clear && exec zsh"
-alias rz="clear; exec zsh"
+alias rr="clear; exec zsh"
