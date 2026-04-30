@@ -319,3 +319,5 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export TERM=xterm-256color
 export PATH="${HOME}/.local/bin":${PATH}
 export PATH=$PATH:$HOME/.local/bin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
